@@ -1,0 +1,16 @@
+
+from datetime import datetime, timedelta
+
+now = datetime.now()
+an_hour_ago = now - timedelta(hours=1)
+yesterday = now - timedelta(days=1)
+tomorrow = now + timedelta(days=1)
+
+import human-datetimedelta as human
+
+print human.date(now)                      # 'now'
+print human.date(an_hour_ago)              # 'an hour ago'
+print human.date(an_hour_ago, short=True)  # '1h ago'
+print human.date(an_hour_ago, asdays=True) # 'today'
+print human.date(yesterday, short=True)    # 'yest'
+print human.date(tomorrow)                 # 'tomorrow'

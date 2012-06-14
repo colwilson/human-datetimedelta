@@ -1,0 +1,12 @@
+Metadata-Version: 1.3
+Name: human-datetimedelta
+Version: 0.1
+Author: Col Wilson
+Author-email: colwilson at bcs org
+Home-page: https://github.com/colwilson/human-datetimedelta/
+Download-url: UNKNOWN
+Summary: Human readable datetime deltas
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: datetime
