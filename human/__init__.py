@@ -8,6 +8,7 @@ __copyright__ = "Copyright 2012, Col Wilson"
 __license__ = "MIT Licence"
 
 from datetime import datetime
+import pytz
 
 def _df(seconds, denominator=1, text='', past=True):
     if past:   return         str((seconds + denominator/2)/ denominator) + text + ' ago'
@@ -22,8 +23,15 @@ def date(time=False, asdays=False, short=False):
     '''
 
     now = datetime.now()
+
     if type(time) is int:   time = datetime.fromtimestamp(time)
     elif not time:          time = now
+
+    # test naivety
+    try:
+        time > now
+    except TypeError, err:
+        now = datetime.utcnow().replace(tzinfo=pytz.utc)
 
     if time > now:  past, diff = False, time - now
     else:           past, diff = True,  now - time
