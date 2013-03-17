@@ -23,7 +23,7 @@ from distutils.core import setup
 
 setup(
     name        = 'human-datetimedelta',
-    version     = '0.3',
+    version     = '0.3.1',
     description = 'Human readable datetime deltas',
     long_description=__doc__,
     author      = 'Col Wilson',
@@ -32,7 +32,7 @@ setup(
     platforms   = 'any',
     url         = 'https://github.com/colwilson/human-datetimedelta/',
     packages    = ['human'],
-    requires    = ['datetime'],
+    requires    = ['pytz'],
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
